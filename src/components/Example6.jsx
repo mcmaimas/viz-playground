@@ -31,7 +31,7 @@ const Blob = () => {
     mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(
       mesh.current.material.uniforms.u_intensity.value,
       hover.current ? 0.95 : 0.15,
-      0.02
+      0.1
     );
   });
 
@@ -57,6 +57,7 @@ const Blob = () => {
 const Scene = () => {
   return (
     <Canvas camera={{ position: [0.0, 0.0, 8.0] }}>
+      
       <Blob />
       <axesHelper />
       <OrbitControls />
